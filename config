@@ -120,8 +120,12 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # open standard programs
-bindsym $mod+F1 exec --no-startup-id i3-msg 'workspace $workspace9; exec firefox;' #sleep 1; for_window [class="Firefox"] focus;' schon viel probiert das web focusiert wird
-assign [class="Firefox"] web
+#bindsym $mod+F1 exec --no-startup-id i3-msg 'workspace $workspace9; exec firefox' 
+bindsym $mod+F2 exec --no-startup-id i3-msg 'exec evolution' 
+bindsym $mod+F1 exec --no-startup-id i3-msg 'exec firefox' 
+
+assign [class="Firefox"] → web
+#number "9: webn"
 assign [class="kile"] Kile
 
 # reload the configuration file
@@ -168,6 +172,7 @@ exec --no-startup-id /usr/configScreen.sh
 #sleep 1
 exec --no-startup-id ~/.dropbox-dist/dropboxd start
 exec --no-startup-id udiskie
+exec --no-startup-id davmail
 
 #lock screen
 bindsym $mod+m exec --no-startup-id i3lock
