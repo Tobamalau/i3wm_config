@@ -122,13 +122,19 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # open standard programs
 #bindsym $mod+F1 exec --no-startup-id i3-msg 'workspace $workspace9; exec firefox' 
-bindsym $mod+F2 exec --no-startup-id i3-msg 'exec evolution' 
+#bindsym $mod+F2 exec --no-startup-id i3-msg 'exec evolution' ; exec --no-startup-id i3-msg 'exec pidgin' ; exec --no-startup-id i3-msg 'exec teams' 
+bindsym $mod+F2 exec --no-startup-id i3-msg 'exec evolution' ; exec --no-startup-id i3-msg 'exec teams' 
 bindsym $mod+F1 exec --no-startup-id i3-msg 'exec firefox' 
 
 assign [class="Firefox"] → web
 #number "9: webn"
 assign [class="kile"] Kile
 assign [class="Evolution"] mail
+# assign [class="^Pidgin$" instance="^Pidgin$" title="^Buddy-Liste$"] pidgin
+# assign [class="Pidgin"] pidgin
+assign [class="Pidgin"] mail
+assign [class="t32marm"] t32marm
+assign [class="t32marm64"] t32marm64
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
